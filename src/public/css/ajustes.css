@@ -1,0 +1,10 @@
+.cuentoInv{
+    opacity: 0.0;
+    user-select: none;
+    cursor: default;
+}
+.cuentoId{
+    opacity: 0.0;
+    user-select: none;
+    cursor: default;
+}

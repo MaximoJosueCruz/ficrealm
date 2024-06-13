@@ -1,0 +1,37 @@
+<!--Retroceder una vez para tener lo anterior -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+
+    <div class="header-image-container">
+        <img src="/img/banner.jpeg" alt="Descripción de la imagen" class="header-image">
+    </div>
+
+    <!-- Contenedor para los géneros y cuentos -->
+    <div class="container mt-3">
+        <h2>Fantasía</h2>
+        <div id="Fantasía-content" class="row"></div>
+
+        <h2>Terror</h2>
+        <div id="Terror-content" class="row"></div>
+
+        <h2>Ciencia Ficción</h2>
+        <div id="Ciencia-Ficción-content" class="row"></div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/firebaseConfig.js" defer></script>
+    <script type="module" src="/js/cargarIndex.js" defer></script>
+    <script src="/js/enviarcuento.js" defer></script>
+</body>
+</html>

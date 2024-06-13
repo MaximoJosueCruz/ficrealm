@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/head') %>
+</head>
+<%- include('partials/navigation') %>
+<body>
+    <div class="container mt-5">
+        <h2>Subir Cuento</h2>
+        <form id="subirCuentoForm">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del Cuento</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="autor" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="autor" pattern="[A-Za-zÀ-ÿ\s\.]+" title="Solo letras, espacios, acentos y puntos permitidos" required>
+            </div>
+            <div class="mb-3">
+                <label for="genero" class="form-label">Género</label>
+                <select class="form-select" id="genero" required>
+                    <option value="" disabled selected>Selecciona un género</option>
+                    <option value="Fantasía">Fantasía</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Ciencia Ficción">Ciencia Ficción</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="resumen" class="form-label">Resumen</label>
+                <textarea class="form-control" id="resumen" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="cuento" class="form-label">Cuento</label>
+                <textarea class="form-control" id="cuento" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Publicar</button>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>
+    <script type="module" src="/js/subirCuento.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+          <img src="/img/logo-frente.png" alt="FicRealm Logo">
+      </a>
+      <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
+              <form id="searchForm" class="d-flex flex-grow-1 mx-3" role="search" onsubmit="handleSearch(event)">
+                  <input id="searchInput" class="form-control me-2 flex-grow-1" type="text" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success bg-primary text-dark" type="submit">Buscar</button>
+              </form>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Género
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" onclick="enviarGenero('Fantasía')">Fantasía</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="enviarGenero('Terror')">Terror</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="enviarGenero('Ciencia Ficción')">Ciencia Ficción</a></li>
+                </ul>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/about">Acerca</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/subircuento">Publicar Cuento</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+<script type="module" src="/js/firebaseConfig.js" defer></script>
+<script src="/js/enviarbusqueda.js" defer></script>
+<script>
+  function enviarGenero(genero) {
+      window.location.href = '/resultado?genero=' + encodeURIComponent(genero);
+  }
+</script>

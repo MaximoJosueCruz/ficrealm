@@ -1,0 +1,27 @@
+body{
+    background: #202020;
+    color: white;
+}
+
+.card-title-custom {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+  .navbar-brand img {
+    height: 40px; /* Ajusta la altura según tus necesidades */
+}
+
+.header-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; /* 25% de la altura de la pantalla */
+    margin-top: 10px; /* Un poco de espacio arriba para separar de la navegación */
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+}
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor manteniendo su proporción */
+}

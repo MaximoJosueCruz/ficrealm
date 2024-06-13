@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <%- include('partials/head')%>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <%- include('partials/navigation')%>
+    <div class="container flex-grow-1 d-flex justify-content-center align-items-center">
+        <div class="card bg-dark text-white text-center w-100" style="max-width: 600px;">
+            <div class="card-header">
+                <h3>Contáctanos</h3>
+            </div>
+            <div class="card-body text-start">
+                <form>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="motivo">Motivo</label>
+                        <input type="text" id="motivo" placeholder="Motivo" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message">Mensaje:</label>
+                        <textarea type= "text "name="message" id="message" rows="4" class="form-control" placeholder="Ingrese el mensaje" required></textarea>
+                    </div>
+                    <button class="btn btn-secondary btn-block" type="submit">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer')%>
+    <script type="module" src="/js/enviarMensaje.js" defer></script>
+    <script type="module" src="/js/enviarbusqueda.js" defer></script>
+</body>
+
+</html>

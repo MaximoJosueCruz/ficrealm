@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cuento - <%= cuento.nombre %></title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+    <div class="container mt-5">
+        <h2>Editar Cuento</h2>
+        <form id="editarCuentoForm">
+            <input type="hidden" id="cuentoId" value="<%= cuento.id %>">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del Cuento</label>
+                <input type="text" class="form-control" id="nombre" value="<%= cuento.nombre %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="autor" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="autor" pattern="[A-Za-zÀ-ÿ\s\.]+" title="Solo letras, espacios, acentos y puntos permitidos" value="<%= cuento.autor %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="genero" class="form-label">Género</label>
+                <select class="form-select" id="genero" required>
+                    <option value="Fantasía" <%= cuento.genero === 'Fantasía' ? 'selected' : '' %>>Fantasía</option>
+                    <option value="Terror" <%= cuento.genero === 'Terror' ? 'selected' : '' %>>Terror</option>
+                    <option value="Ciencia Ficción" <%= cuento.genero === 'Ciencia Ficción' ? 'selected' : '' %>>Ciencia Ficción</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="resumen" class="form-label">Resumen</label>
+                <textarea class="form-control" id="resumen" rows="3" required><%= cuento.resumen %></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="cuento" class="form-label">Cuento</label>
+                <textarea class="form-control" id="cuento" rows="10" required><%= cuento.cuento %></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+    </div>
+    <%- include('partials/footer') %>
+    <script type="module" src="/js/editarCuento.js" defer></script>
+</body>
+</html>

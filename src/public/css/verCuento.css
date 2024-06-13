@@ -1,0 +1,11 @@
+.w-90 {
+    width: 90%;
+}
+@media (max-width: 768px) {
+    .w-90 {
+        width: 95%;
+    }
+}
+.text-justify {
+    text-align: justify;
+}

@@ -1,0 +1,25 @@
+[debug] [2024-06-13T22:00:24.035Z] ----------------------------------------------------------------------
+[debug] [2024-06-13T22:00:24.037Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\minim\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-13T22:00:24.037Z] CLI Version:   13.11.2
+[debug] [2024-06-13T22:00:24.037Z] Platform:      win32
+[debug] [2024-06-13T22:00:24.037Z] Node Version:  v20.11.1
+[debug] [2024-06-13T22:00:24.037Z] Time:          Thu Jun 13 2024 16:00:24 GMT-0600 (Central Standard Time)
+[debug] [2024-06-13T22:00:24.037Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-13T22:00:24.042Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-13T22:00:24.042Z] > authorizing via signed-in user (20041236@itdurango.edu.mx)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\xampp\htdocs\proyectofinal\finalcuentos
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+

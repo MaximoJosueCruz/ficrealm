@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+    <div class="container mt-5">
+        <h2>Fantasía</h2>
+        <div id="Fantasía-content" class="row"></div>
+
+        <h2>Terror</h2>
+        <div id="Terror-content" class="row"></div>
+
+        <h2>Ciencia Ficción</h2>
+        <div id="Ciencia-Ficción-content" class="row"></div>
+    </div>
+    <%- include('partials/footer') %>
+    <script src="/js/firebaseConfig.js"></script>
+    <script src="/js/cargarIndex.js"></script>
+    <script type="module" src="/js/cargarAdmin.js" defer></script>
+</body>
+</html>
